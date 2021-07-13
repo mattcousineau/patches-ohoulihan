@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import patches.common.Constants;
+
 public class PropertiesFileHelper {
 
 	Map<String, String> results = new HashMap<>();
@@ -26,9 +28,9 @@ public class PropertiesFileHelper {
 				throw new FileNotFoundException("property file '" + propFileName + " not found...");
 			}
 			
-			results.put("patchfileurl", prop.getProperty("patchfileurl"));
-			results.put("fileserverurl", prop.getProperty("fileserverurl"));
-			results.put("saltword", prop.getProperty("saltword"));
+			results.put(Constants.PATCH_FILE_URL, prop.getProperty(Constants.PATCH_FILE_URL));
+			results.put(Constants.REMOTE_FILESERVER_URL, prop.getProperty(Constants.REMOTE_FILESERVER_URL));
+			results.put(Constants.SALT_WORD, prop.getProperty(Constants.SALT_WORD));
 
 		} catch (Exception e) {
 			System.out.println("Exception: " + e);
