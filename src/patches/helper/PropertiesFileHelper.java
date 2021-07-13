@@ -14,7 +14,7 @@ public class PropertiesFileHelper {
 	Map<String, String> results = new HashMap<>();
 	InputStream inputStream;
 	
-	public Map<String, String> getPropertyValues() throws IOException {
+	public Map<String, String> loadPropertyValues() throws IOException {
 		
 		try {
 			Properties prop = new Properties();
@@ -31,7 +31,8 @@ public class PropertiesFileHelper {
 			results.put(Constants.PATCH_FILE_URL, prop.getProperty(Constants.PATCH_FILE_URL));
 			results.put(Constants.REMOTE_FILESERVER_URL, prop.getProperty(Constants.REMOTE_FILESERVER_URL));
 			results.put(Constants.SALT_WORD, prop.getProperty(Constants.SALT_WORD));
-
+			results.put(Constants.LOCAL_FILE_DIRECTORY, prop.getProperty(Constants.LOCAL_FILE_DIRECTORY));
+			
 		} catch (Exception e) {
 			System.out.println("Exception: " + e);
 		} finally {
