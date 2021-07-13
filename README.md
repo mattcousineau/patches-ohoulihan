@@ -11,7 +11,7 @@ A basic file patching service to be utilized in another project of mine.
 
 (complete - 30 min) -Read file from patchfileurl
 
-(in process) -Local directory reading
+(complete - 45 min) -Local directory reading
 
 -Negotiate differences beteen patchfileurl and local directory 
 
