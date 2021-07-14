@@ -22,3 +22,5 @@ A basic file patching service to be utilized in another project of mine.
 -Add checksum capabiltiies (this will need to be broken out into smaller chunks)
 
 -clean up tasks (remove localdirectory variables in favor of relative paths)
+
+**nice to have** - if there is nothing installed, download a zip instead of independent files and extract
