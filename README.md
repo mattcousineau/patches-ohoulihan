@@ -30,7 +30,7 @@ A basic file patching service to be utilized in another project of mine.
 
 --compare to string in the patch file
 
---replace name check with above
+--replace placeholder name negotiation logic with above
 
 -clean up tasks (remove localdirectory variables in favor of relative paths)
 
