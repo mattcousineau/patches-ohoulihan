@@ -18,6 +18,7 @@ A basic file patching service to be utilized in another project of mine.
 (complete - 45 min) -Download different files  (currently going to use name -then checksum compare later) 
 
 (in process) -build a separate project to build the initial patch file from source local directory  (use relative filepaths and then update this program to use them)
+https://github.com/mattcousineau/patch-adams
 
 --read source files into memory and create a checksum representation string
 
