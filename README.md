@@ -20,3 +20,5 @@ A basic file patching service to be utilized in another project of mine.
 -build a separate project to build the initial patch file from source local directory  (use relative filepaths and then update this program to use them)
 
 -Add checksum capabiltiies (this will need to be broken out into smaller chunks)
+
+-clean up tasks (remove localdirectory variables in favor of relative paths)
