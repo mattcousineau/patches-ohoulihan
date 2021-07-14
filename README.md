@@ -23,7 +23,8 @@ A basic file patching service to be utilized in another project of mine.
 
 --write each checksum representation to a txt file
 
--Add checksum capabiltiies to patches-ohoulihan (this will need to be broken out into smaller chunks)
+
+-Add checksum capabiltiies to patches-ohoulihan
 
 --read local files into memory and create checksum representation string
 
