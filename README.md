@@ -31,7 +31,7 @@ https://github.com/mattcousineau/patch-adams
 
 --compare to string in the patch file
 
---replace placeholder name negotiation logic with above
+(complete 10 min) -replace placeholder name negotiation logic with above
 
 -clean up tasks (remove localdirectory variables in favor of relative paths)
 
