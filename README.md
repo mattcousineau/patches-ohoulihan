@@ -20,9 +20,9 @@ A basic file patching service to be utilized in another project of mine.
 (in process) -build a separate project to build the initial patch file from source local directory  (use relative filepaths and then update this program to use them)
 https://github.com/mattcousineau/patch-adams
 
---read source files into memory and create a checksum representation string
+(complete - 20 min)--read source files into memory and create a checksum representation string
 
---write each checksum representation to a txt file
+(complete - 20 min)--write each checksum representation to a txt file
 
 
 -Add checksum capabiltiies to patches-ohoulihan
