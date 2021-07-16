@@ -33,7 +33,7 @@ https://github.com/mattcousineau/patch-adams
 
 (complete 10 min) -replace placeholder name negotiation logic with above
 
--efficiency tasks (need to improve the checksum creation.  I/O is slooowwwwww
+(completed 20 min) -efficiency tasks (need to improve the checksum creation.  I/O is slooowwwwww
 
 -ability to select URL or FTP and add FTP processing
 
