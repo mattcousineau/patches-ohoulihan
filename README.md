@@ -41,6 +41,6 @@ https://github.com/mattcousineau/patch-adams
 
 **nice to have** - retry on failed download
 
--clean up tasks (remove localdirectory variables in favor of relative paths)
+(completed 10 min) -clean up tasks (remove localdirectory variables in favor of relative paths)
 
 I borrowed the 'Fast MD5' implementation from http://www.twmacinta.com/myjava/fast_md5.php .
