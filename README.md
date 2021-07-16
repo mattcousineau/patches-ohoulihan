@@ -33,10 +33,12 @@ https://github.com/mattcousineau/patch-adams
 
 (complete 10 min) -replace placeholder name negotiation logic with above
 
--clean up tasks (remove localdirectory variables in favor of relative paths)
-
 -efficiency tasks (need to improve the checksum creation.  I/O is slooowwwwww
+
+-ability to select URL or FTP and add FTP processing
 
 **nice to have** - if there is nothing installed, download a zip instead of independent files and extract
 
 **nice to have** - retry on failed download
+
+-clean up tasks (remove localdirectory variables in favor of relative paths)
