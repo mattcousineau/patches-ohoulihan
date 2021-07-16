@@ -38,4 +38,5 @@ https://github.com/mattcousineau/patch-adams
 -efficiency tasks (need to improve the checksum creation.  I/O is slooowwwwww
 
 **nice to have** - if there is nothing installed, download a zip instead of independent files and extract
+
 **nice to have** - retry on failed download
