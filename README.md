@@ -1,46 +1,29 @@
 # patches-ohoulihan
 A basic file patching service to be utilized in another project of mine.
 
+# Instructions
+Configure the application variables in `config.properties`.
+1. `patchfileurl` is the location of the patch file generated with patch-adams
+2. `fileserverurl` is where you keep the master file copies to be downloaded (don't use any slashes at end of URL)
+3. `saltword` is currently un-used, but you can add it to the hashing function for more security
+4. `localfiledirectory` is un-used, but may be helpful to use for testing in external directories
+5. `fileretryattempts` is un-used, but will be added in the near future
+
+Compile and run patches-ohoulihan.jar in any folder you wish to check the contents against the `patchfileurl` file.  
+It will:
+1. Use the same algorithm to compile the local file checksums as was used to compile the remote file checksum list
+2. Compare the local vs. the remote
+3. Download any files that are different
+
+It will not: 
+1. Delete any exisitng files that don't exist in the `patchfileurl` file (this is useful for saving user profiles, custom settings, etc.)
 
 # TODO:
-(complete - 30 min) -Create config file with patchfileurl, remoteserverurl, saltword
-
-(complete - 30 min) -Read config file into data structure for use in application
-
-(complete - 30 min) -Connection to remote URLs
-
-(complete - 30 min) -Read file from patchfileurl
-
-(complete - 45 min) -Local directory reading
-
-(complete - 30 min) -Negotiate differences beteen patchfileurl and local directory 
-
-(complete - 45 min) -Download different files  (currently going to use name -then checksum compare later) 
-
-(complete - 60 min) -build a separate project to build the initial patch file from source local directory  (use relative filepaths and then update this program to use them)
-https://github.com/mattcousineau/patch-adams
-
-(complete - 20 min)--read source files into memory and create a checksum representation string
-
-(complete - 20 min)--write each checksum representation to a txt file
-
-
-(complete - 20 min)-Add checksum capabiltiies to patches-ohoulihan
-
-(complete - 20 min) --read local files into memory and create checksum representation string
-
-(complete - 20 min) --compare to string in the patch file
-
-(complete 10 min) -replace placeholder name negotiation logic with above
-
-(completed 20 min) -efficiency tasks (need to improve the checksum creation.  I/O is slooowwwwww
-
 -ability to select URL or FTP and add FTP processing
 
 **nice to have** - if there is nothing installed, download a zip instead of independent files and extract
 
 **nice to have** - retry on failed download
 
-(completed 10 min) -clean up tasks (remove localdirectory variables in favor of relative paths)
-
+# Credit
 I borrowed the 'Fast MD5' implementation from http://www.twmacinta.com/myjava/fast_md5.php .
