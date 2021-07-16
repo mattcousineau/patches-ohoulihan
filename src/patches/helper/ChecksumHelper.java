@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import java.security.NoSuchAlgorithmException;
 
-import com.twmacinta.util.MD5;
+import patches.utils.MD5;
 
 public class ChecksumHelper {
 

@@ -1,4 +1,4 @@
-package com.twmacinta.util;
+package patches.utils;
 
 /**
  * Fast implementation of RSA's MD5 hash generator in Java JDK Beta-2 or higher<br>

@@ -1,4 +1,4 @@
-package com.twmacinta.util;
+package patches.utils;
 
 import java.io.*;
 
