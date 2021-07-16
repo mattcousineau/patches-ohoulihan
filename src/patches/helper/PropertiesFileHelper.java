@@ -11,7 +11,7 @@ import patches.common.Constants;
 
 public class PropertiesFileHelper {
 
-	Map<String, String> results = new HashMap<>();
+	Map<String, String> properties = new HashMap<>();
 	InputStream inputStream;
 	
 	public Map<String, String> loadPropertyValues() throws IOException {
@@ -28,16 +28,16 @@ public class PropertiesFileHelper {
 				throw new FileNotFoundException("property file '" + propFileName + " not found...");
 			}
 			
-			results.put(Constants.PATCH_FILE_URL, prop.getProperty(Constants.PATCH_FILE_URL));
-			results.put(Constants.REMOTE_FILESERVER_URL, prop.getProperty(Constants.REMOTE_FILESERVER_URL));
-			results.put(Constants.SALT_WORD, prop.getProperty(Constants.SALT_WORD));
-			results.put(Constants.LOCAL_FILE_DIRECTORY, prop.getProperty(Constants.LOCAL_FILE_DIRECTORY));
+			properties.put(Constants.PATCH_FILE_URL, prop.getProperty(Constants.PATCH_FILE_URL));
+			properties.put(Constants.REMOTE_FILESERVER_URL, prop.getProperty(Constants.REMOTE_FILESERVER_URL));
+			properties.put(Constants.SALT_WORD, prop.getProperty(Constants.SALT_WORD));
+			properties.put(Constants.LOCAL_FILE_DIRECTORY, prop.getProperty(Constants.LOCAL_FILE_DIRECTORY));
 			
 		} catch (Exception e) {
 			System.out.println("Exception: " + e);
 		} finally {
 			inputStream.close();
 		}
-		return results;
+		return properties;
 	}
 }

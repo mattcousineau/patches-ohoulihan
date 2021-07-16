@@ -1,39 +1,30 @@
 package patches.handler;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
+
+import patches.helper.ChecksumHelper;
 
 public class LocalFileHandler {
 
-	public void scanLocalDirectory(String directoryName, List<String> fileNameList) {
+	public void scanLocalDirectory(String baseDirectory, String directoryName, List<String> fileNameList) throws NoSuchAlgorithmException, FileNotFoundException, IOException {
 	    File directory = new File(directoryName);
 
-	    // Get all file names from a directory.
 	    File[] fileList = directory.listFiles();
 	    
-	    if(fileList != null) {
+	    if (fileList != null) {
 	        for (File file : fileList) {      
 	            if (file.isFile()) {
 	                System.out.println("processLocalPatchFile: Adding file path to fileList: " + file.getPath());
-	            	fileNameList.add(file.getPath());
+	            	fileNameList.add(file.getPath().replace(baseDirectory, "") + "$" + ChecksumHelper.createFileChecksum(file.getAbsolutePath()));
 	            } else if (file.isDirectory()) {
-	            	scanLocalDirectory(file.getAbsolutePath(), fileNameList);
+	            	scanLocalDirectory(baseDirectory, file.getAbsolutePath(), fileNameList);
 	            }
 	        }   
 	    }
 	}
-	
-	public void negotiateFileDifferences(List<String> remoteFileNameList, List<String> localFileNameList) {
-		if (remoteFileNameList.size() == localFileNameList.size()) {
-			System.out.println("Remote and Local FileNameList size matches");
-		} else {
-			System.out.println("FAILED: sizes:" + remoteFileNameList.size() + "  " + localFileNameList.size());
-		}
-		
-		if (remoteFileNameList.hashCode() == localFileNameList.hashCode()) {
-			System.out.println("Remote and Local FileNameList hashCodes match");
-		} else {
-			System.out.println("FAILED: hashCodes do not match!");
-		}
-	}
 }
+

@@ -1,10 +1,12 @@
 package patches.handler;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,30 @@ public class RemoteFileHandler {
 		return fileNameList;
 	}
 	
+    public static void downloadMissingRemoteFile(URL url, String fileName) throws IOException {
+    	System.out.println("url is " + url.getPath());
+    	File yourFile = new File(fileName);
+    	yourFile.getParentFile().mkdirs();
+    	yourFile.createNewFile();
+        try (InputStream in = url.openStream();
+                BufferedInputStream bis = new BufferedInputStream(in);
+                FileOutputStream fos = new FileOutputStream(fileName)) {
+        	System.out.println("Trying to write file from " + url.getPath() + " to " + fileName);
+            byte[] data = new byte[1024];
+            int count;
+            while ((count = bis.read(data, 0, 1024)) != -1) {
+                fos.write(data, 0, count);
+            }
+        } catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    
+    public void downloadAndExtractZipFile() {
+    	//download zip file
+    	//extract it
+    }
+    
 	private InputStream getRemotePatchFileFromURL(String patchFileUrl) throws IOException {
 		URL url = new URL(patchFileUrl);
 		InputStream inputStream = url.openStream();
@@ -39,9 +65,7 @@ public class RemoteFileHandler {
 		return inputStream;
 	}
 	
-	public void getFilesFromRemoteDirectory(String fileServerUrl) throws MalformedURLException {
-		URL url = new URL(fileServerUrl);
-
+	private void getRemotePatchFileFromFTP() {
+		
 	}
-	//get server files
 }
