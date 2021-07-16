@@ -25,11 +25,11 @@ https://github.com/mattcousineau/patch-adams
 (complete - 20 min)--write each checksum representation to a txt file
 
 
--Add checksum capabiltiies to patches-ohoulihan
+(complete - 20 min)-Add checksum capabiltiies to patches-ohoulihan
 
---read local files into memory and create checksum representation string
+(complete - 20 min) --read local files into memory and create checksum representation string
 
---compare to string in the patch file
+(complete - 20 min) --compare to string in the patch file
 
 (complete 10 min) -replace placeholder name negotiation logic with above
 
