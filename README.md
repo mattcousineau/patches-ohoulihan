@@ -3,7 +3,7 @@ A basic file patching service to be utilized in another project of mine.
 
 # Instructions
 Configure the application variables in `config.properties`.
-1. `patchfileurl` is the location of the patch file generated with patch-adams
+1. `patchfileurl` is the location of the patch .txt file generated with patch-adams
 2. `fileserverurl` is where you keep the master file copies to be downloaded (don't use any slashes at end of URL)
 3. `saltword` is currently un-used, but you can add it to the hashing function for more security
 4. `localfiledirectory` is un-used, but may be helpful to use for testing in external directories
@@ -19,7 +19,7 @@ It will not:
 1. Delete any exisitng files that don't exist in the `patchfileurl` file (this is useful for saving user profiles, custom settings, etc.)
 
 # TODO:
--ability to select URL or FTP and add FTP processing
+-ability to configure URL or FTP and add FTP processing
 
 **nice to have** - if there is nothing installed, download a zip instead of independent files and extract
 
